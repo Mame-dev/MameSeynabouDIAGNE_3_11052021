@@ -20,6 +20,7 @@ input {
   background: unset;
   border: none;
   font-size: inherit;
+  padding-left: 5%;
 }
 
 .reservation {
@@ -28,11 +29,7 @@ input {
   background: whitesmoke;
   padding-bottom: 10%;
 }
-.reservation h1 {
-  display: flex;
-  justify-content: center;
-}
-.reservation p {
+.reservation h1, .reservation p {
   display: flex;
   justify-content: center;
 }
@@ -47,6 +44,218 @@ button {
   position: relative;
   left: 38%;
   border: none;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Shrikhand", cursive;
+}
+.fonctionnement-etape {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.fonctionnement-etape__choix {
+  text-decoration: none;
+  color: black;
+  border-radius: 17px;
+  box-shadow: 1px 1px 2px 2px lightgrey;
+  border: none;
+  margin-bottom: 10%;
+  background: whitesmoke;
+  padding: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.choix_numero {
+  border-radius: 25px;
+  background: #9356DC;
+  padding: 7px 8px 5px 5px;
+  position: relative;
+  right: 24px;
+  bottom: -1px;
+}
+.choix_icon {
+  color: gray;
+}
+.choix_titre {
+  left: 20px;
+  position: relative;
+}
+
+#restaurants {
+  display: flex;
+  flex-direction: column;
+  background: whitesmoke;
+  padding-bottom: 10%;
+}
+#restaurants h1 {
+  margin-left: 15px;
+}
+#restaurants-nom1 {
+  color: black;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 30px;
+  box-shadow: 0 0 6px 3px #b1b1b14b;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 93%;
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative;
+}
+#restaurants-nom1 img {
+  height: 85%;
+  width: 100%;
+  margin-right: 11px;
+  object-fit: cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #fff;
+}
+#restaurants-nom1 p {
+  margin: -8px 0px -18px 15px;
+  font-size: x-large;
+  color: grey;
+}
+#restaurants-nom1 span {
+  position: relative;
+  left: 19em;
+  bottom: 1.7em;
+  font-size: xx-large;
+}
+#restaurants-nom1 h2 {
+  margin-left: 15px;
+}
+#restaurants-nom1 h3 {
+  background: #99E2D0;
+  color: seagreen;
+  padding: 4px 12px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#restaurants-nom2 {
+  color: black;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 30px;
+  box-shadow: 0 0 6px 3px #b1b1b14b;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 93%;
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative;
+}
+#restaurants-nom2 img {
+  height: 85%;
+  width: 100%;
+  margin-right: 11px;
+  object-fit: cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #fff;
+}
+#restaurants-nom2 p {
+  margin: -8px 0px -18px 15px;
+  font-size: x-large;
+  color: grey;
+}
+#restaurants-nom2 span {
+  position: relative;
+  left: 19em;
+  bottom: 1.7em;
+  font-size: xx-large;
+}
+#restaurants-nom2 h2 {
+  margin-left: 15px;
+}
+#restaurants-nom2 h3 {
+  background: #99E2D0;
+  color: seagreen;
+  padding: 4px 12px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#restaurants-nom3 {
+  color: black;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 30px;
+  box-shadow: 0 0 6px 3px #b1b1b14b;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 93%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#restaurants-nom3 img {
+  height: 85%;
+  width: 100%;
+  margin-right: 11px;
+  object-fit: cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #fff;
+}
+#restaurants-nom3 p {
+  margin: -8px 0px -18px 15px;
+  font-size: x-large;
+  color: grey;
+}
+#restaurants-nom3 span {
+  position: relative;
+  left: 19em;
+  bottom: 1.7em;
+  font-size: xx-large;
+}
+#restaurants-nom3 h2 {
+  margin-left: 15px;
+}
+#restaurants-nom4 {
+  color: black;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 30px;
+  box-shadow: 0 0 6px 3px #b1b1b14b;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 93%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#restaurants-nom4 img {
+  height: 85%;
+  width: 100%;
+  margin-right: 11px;
+  object-fit: cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #fff;
+}
+#restaurants-nom4 p {
+  margin: -8px 0px -18px 15px;
+  font-size: x-large;
+  color: grey;
+}
+#restaurants-nom4 span {
+  position: relative;
+  left: 19em;
+  bottom: 1.7em;
+  font-size: xx-large;
+}
+#restaurants-nom4 h2 {
+  margin-left: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
