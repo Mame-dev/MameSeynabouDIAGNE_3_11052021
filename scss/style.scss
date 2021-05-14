@@ -257,3 +257,59 @@ button{
         }
     }
 }
+.main{position: relative;
+    img{
+        object-fit: cover;
+        width: 100%;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        background: whitesmoke;
+        padding-bottom: 10%;
+        border-top-left-radius: 5em;
+        border-top-right-radius: 5em;
+        position: relative;
+        bottom: 9em;
+        h1{
+        margin-left: 30px;
+        }
+        &-type{
+            margin-left: 15px;
+            margin-right: 15px;
+            h2{
+                margin-left: 15px;
+            }
+            &__repas{
+                border-radius: 17px;
+                box-shadow: 1px 1px 2px 2px lightgrey;
+                border: none;
+                margin-bottom: 10%;
+                background: white;
+                padding: 20px;
+                margin-left: 15px;
+                margin-right: 15px
+            }
+        }
+
+    }
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    background: dimgray;
+    h2{
+        color: white;
+        margin-left: 15px;
+    }
+    &-contact{
+        color: #ffff;
+        text-decoration: none;
+        margin-left: 15px;
+        display: flex;
+        align-items: baseline;
+        p{
+            margin-left: 10px;
+        }
+    }
+}

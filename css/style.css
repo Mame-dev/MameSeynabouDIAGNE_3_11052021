@@ -258,4 +258,62 @@ button {
   margin-left: 15px;
 }
 
+.main {
+  position: relative;
+}
+.main img {
+  object-fit: cover;
+  width: 100%;
+}
+.main .menu {
+  display: flex;
+  flex-direction: column;
+  background: whitesmoke;
+  padding-bottom: 10%;
+  border-top-left-radius: 5em;
+  border-top-right-radius: 5em;
+  position: relative;
+  bottom: 9em;
+}
+.main .menu h1 {
+  margin-left: 30px;
+}
+.main .menu-type {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.main .menu-type h2 {
+  margin-left: 15px;
+}
+.main .menu-type__repas {
+  border-radius: 17px;
+  box-shadow: 1px 1px 2px 2px lightgrey;
+  border: none;
+  margin-bottom: 10%;
+  background: white;
+  padding: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: dimgray;
+}
+.footer h2 {
+  color: white;
+  margin-left: 15px;
+}
+.footer-contact {
+  color: #ffff;
+  text-decoration: none;
+  margin-left: 15px;
+  display: flex;
+  align-items: baseline;
+}
+.footer-contact p {
+  margin-left: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
