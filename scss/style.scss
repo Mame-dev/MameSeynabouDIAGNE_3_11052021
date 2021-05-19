@@ -13,13 +13,30 @@ $screen-sm-min: 375px;
 
 body {
     margin: 0;
+    font-family:'Roboto', sans-serif;
 }
 
 header{
     display: flex;
     justify-content: center;
-    margin-top: 6%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     }
+.header-menu{
+    display:flex;
+    a{
+        display: flex;
+        text-decoration: none;
+        align-self: center;
+        position: relative;
+        right: 25%;
+        font-size: x-large;
+        color: black;
+    }
+    img{
+        display: flex;
+    }
+}
 form{    
     background: lightgrey;
     display: flex;
@@ -37,7 +54,8 @@ input{
     display: flex;
     flex-direction: column;
     background: whitesmoke;
-    padding-bottom: 10%;
+    padding: 5%;
+    text-align: center;
     h1,p{
         display: flex;
         justify-content: center;
@@ -48,17 +66,21 @@ button{
     color: white;
     border-radius: 25px;
     box-shadow: 1px 1px 2px 2px lightgray;
-    width: 25%;
+    width: 50%;
     height: 4em;
     position: relative;
-    left: 38%;
+    left: 25%;
     border: none;
 }
 .fonctionnement{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Shrikhand', cursive;
+    h1{
+        display: flex;
+        align-self: flex-start; 
+        margin-left: 25px
+    }
     &-etape{
     display: flex;
     flex-direction: column;
@@ -72,8 +94,8 @@ button{
             margin-bottom: 10%;
             background: whitesmoke;
             padding: 20px;
-            margin-left: 15px;
-            margin-right: 15px;
+            margin-left: 25px;
+            margin-right: 25px;
         }
     }
 }
@@ -114,8 +136,8 @@ button{
         display: flex;
         flex-direction: column;
         height: 247px;
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 25px;
+        margin-right: 25px;
         position:relative;
         img{
             height: 66%;
@@ -168,16 +190,28 @@ button{
         flex-direction: column;
         background: whitesmoke;
         padding-bottom: 10%;
-        border-top-left-radius: 5em;
-        border-top-right-radius: 5em;
+        border-top-left-radius: 3em;
+        border-top-right-radius: 3em;
         position: relative;
-        bottom: 9em;
+        bottom: 3em;
+        &-titre{
+            display: flex;
+            justify-content: space-between;
+        }
         h1{
         margin-left: 30px;
+        font-family: 'Shrikhand';
+        font-size: x-large;
+        }
+        span{
+            display:flex;
+            font-size: x-large;
+            align-items: center;
+            margin-right: 30px;
         }
         &-type{
-            margin-left: 15px;
-            margin-right: 15px;
+            margin-left: 25px;
+            margin-right: 25px;
             h2{
                 margin-left: 15px;
             }
@@ -187,9 +221,23 @@ button{
                 border: none;
                 margin-bottom: 10%;
                 background: white;
-                padding: 20px;
-                margin-left: 15px;
-                margin-right: 15px
+                padding: 5px 13px;
+                display: flex;
+                justify-content: space-between;
+                &_contain{
+                    display: flex;
+                    flex-direction: column;
+                    span{
+                        font-size: medium;
+                    }
+                    p{
+                        font-size: small;
+                    }
+                }
+                &_prix{
+                    display: flex;
+                    align-items: flex-end;
+                }
             }
         }
 
@@ -201,12 +249,13 @@ button{
     background: dimgray;
     h2{
         color: white;
-        margin-left: 15px;
+        margin-left: 25px;
+        font-family: 'Shrikhand';
     }
     &-contact{
         color: #ffff;
         text-decoration: none;
-        margin-left: 15px;
+        margin-left: 25px;
         display: flex;
         align-items: baseline;
         p{
