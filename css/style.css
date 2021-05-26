@@ -39,7 +39,7 @@
     background: unset;
     border: none;
     font-size: inherit;
-    padding-left: 5%;
+    padding-left: 15px;
   }
 
   .reservation {
@@ -49,9 +49,15 @@
     padding: 5%;
     text-align: center;
   }
-  .reservation h1, .reservation p {
+  .reservation h1 {
     display: flex;
     justify-content: center;
+    margin-bottom: 0;
+  }
+  .reservation p {
+    display: flex;
+    justify-content: center;
+    color: grey;
   }
 
   button {
@@ -59,7 +65,7 @@
     color: white;
     border-radius: 25px;
     box-shadow: 1px 1px 2px 2px lightgray;
-    width: 50%;
+    width: 58%;
     height: 4em;
     position: relative;
     left: 25%;
@@ -70,6 +76,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
   .fonctionnement h1 {
     display: flex;
@@ -85,13 +93,18 @@
     text-decoration: none;
     color: black;
     border-radius: 17px;
-    box-shadow: 1px 1px 2px 2px lightgrey;
+    box-shadow: 1px 3px 12px 0px lightgrey;
     border: none;
-    margin-bottom: 10%;
+    margin-bottom: 20px;
     background: whitesmoke;
     padding: 20px;
-    margin-left: 25px;
+    margin-left: 10%;
     margin-right: 25px;
+    transition: background-color 250ms;
+  }
+  .fonctionnement-etape__choix:hover {
+    background: rgba(147, 86, 220, 0.15);
+    box-shadow: 1px 1px 2px 2px rgba(147, 86, 220, 0.15);
   }
 
   .choix_numero {
@@ -100,11 +113,14 @@
     padding: 2px 8px;
     color: white;
     position: relative;
-    right: 24px;
+    right: 33px;
     bottom: -1px;
   }
   .choix_icon {
     color: gray;
+  }
+  .choix_icon:hover {
+    color: #9356DC;
   }
   .choix_titre {
     left: 20px;
@@ -118,7 +134,7 @@
     padding-bottom: 10%;
   }
   .restaurants h1 {
-    margin-left: 15px;
+    margin-left: 25px;
   }
   .restaurants-nom {
     color: black;
@@ -172,6 +188,10 @@
     font-size: xx-large;
     align-items: center;
     padding-right: 15px;
+    transform-origin: 0% 50%;
+    transform: scaleX(0);
+    transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+    color: #9356DC;
   }
 
   .main {
@@ -219,7 +239,7 @@
     border: none;
     margin-bottom: 10%;
     background: white;
-    padding: 5px 13px;
+    padding: 5px 0 5px 13px;
     display: flex;
     justify-content: space-between;
   }
@@ -236,6 +256,33 @@
   .main .menu-type__repas_prix {
     display: flex;
     align-items: flex-end;
+  }
+  .main .menu-type__repas_check {
+    display: inline-block;
+    width: 35px;
+    color: white;
+    background: #99E2D0;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    transform: scaleX(1);
+  }
+  .main .menu-type__repas_check i {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 20px;
+    background: white;
+    color: #99E2D0;
+    border-radius: 100%;
+    transform: rotate(180deg);
+    opacity: 0;
+    transition: transform ease-in-out 0.5s, opacity ease-in-out 0.2s 0.2s;
+  }
+  .main .menu-type__repas_check:hover {
+    display: block;
+    transform-origin: left;
+    transform: scale(0);
+    transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
   }
 
   .footer {
