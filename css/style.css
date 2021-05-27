@@ -77,7 +77,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-    margin-bottom: 30px;
   }
   .fonctionnement h1 {
     display: flex;
@@ -93,12 +92,12 @@
     text-decoration: none;
     color: black;
     border-radius: 17px;
-    box-shadow: 1px 3px 12px 0px lightgrey;
+    box-shadow: 1px 1px 2px 2px lightgrey;
     border: none;
     margin-bottom: 20px;
     background: whitesmoke;
     padding: 20px;
-    margin-left: 10%;
+    margin-left: 13%;
     margin-right: 25px;
     transition: background-color 250ms;
   }
@@ -134,7 +133,7 @@
     padding-bottom: 10%;
   }
   .restaurants h1 {
-    margin-left: 25px;
+    margin-left: 15px;
   }
   .restaurants-nom {
     color: black;
@@ -145,7 +144,7 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    height: 247px;
+    height: 252px;
     margin-left: 25px;
     margin-right: 25px;
     position: relative;
@@ -153,7 +152,6 @@
   .restaurants-nom img {
     height: 66%;
     width: 100%;
-    margin-right: 11px;
     object-fit: cover;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
@@ -161,19 +159,20 @@
   }
   .restaurants-nom_contain {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
   }
   .restaurants-nom_contain__titre {
     display: flex;
     flex-direction: column;
   }
   .restaurants-nom_contain__titre p {
-    margin: -8px 0px -18px 15px;
-    font-size: larger;
+    margin: -10px 0px -18px 15px;
+    font-size: medium;
     color: grey;
   }
   .restaurants-nom_contain__titre h2 {
     margin-left: 15px;
+    font-size: larger;
   }
   .restaurants-nom_contain__titre span {
     background: #99E2D0;
@@ -182,16 +181,24 @@
     position: absolute;
     right: 16px;
     top: 16px;
+    font-weight: bold;
   }
-  .restaurants-nom_contain__coeur {
+  .restaurants-nom__coeur {
     display: flex;
-    font-size: xx-large;
-    align-items: center;
-    padding-right: 15px;
-    transform-origin: 0% 50%;
-    transform: scaleX(0);
-    transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
-    color: #9356DC;
+    font-size: x-large;
+    align-self: flex-end;
+    margin-top: -20px;
+    margin-right: 15px;
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+    opacity: 0.2;
+  }
+  .restaurants-nom__coeur:hover {
+    transition: all 2s ease-in-out;
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0;
+    opacity: 1;
   }
 
   .main {
@@ -232,6 +239,8 @@
   }
   .main .menu-type h2 {
     margin-left: 15px;
+    border-bottom: 2px solid #99E2D0;
+    width: 50px;
   }
   .main .menu-type__repas {
     border-radius: 17px;

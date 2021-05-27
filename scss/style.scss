@@ -150,14 +150,13 @@ button{
         background-color: white;
         display: flex;
         flex-direction: column;
-        height: 247px;
+        height: 252px;
         margin-left: 25px;
         margin-right: 25px;
         position:relative;
         img{
             height: 66%;
             width: 100%;
-            margin-right: 11px;
             object-fit: cover;
             border-top-left-radius: 25px;
             border-top-right-radius: 25px;
@@ -165,17 +164,18 @@ button{
         }
         &_contain{
             display:flex;
-            justify-content: space-between;
+            flex-direction: column;
             &__titre{
                 display:flex;
                 flex-direction: column;
                 p{
-                    margin: -8px 0px -18px 15px;
-                    font-size: larger;
+                    margin: -10px 0px -18px 15px;
+                    font-size: medium;
                     color: grey;
                 }
                 h2{
                     margin-left: 15px;
+                    font-size: larger;
                 }
                 span{
                     background: #99E2D0;
@@ -184,19 +184,27 @@ button{
                     position:absolute;
                     right:16px;
                     top:16px;
+                    font-weight: bold;
                 }
             }
-            &__coeur{
+           
+        }
+        &__coeur{
                 display:flex;
-                font-size: xx-large;
-                align-items: center;
-                padding-right: 15px;
-                transform-origin: 0% 50%;
-                transform: scaleX(0);
-                transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                color: $color-primary;
-            
-            }
+                font-size: x-large;
+                align-self: flex-end;
+                margin-top: -20px;
+                margin-right: 15px;
+                color:transparent;
+	            -webkit-text-stroke:2px black;
+	            opacity:0.2;
+                    &:hover {
+                    transition: all 2s ease-in-out;
+                    background: linear-gradient($color-primary,$color-secondary);
+                    -webkit-background-clip: text;
+                    -webkit-text-stroke: 0;
+                    opacity: 1;
+                    }
         }
     }
 }     
@@ -234,6 +242,8 @@ button{
             margin-right: 25px;
             h2{
                 margin-left: 15px;
+                border-bottom: 2px solid $color-tertiary;
+                width: 50px;
             }
             &__repas{
                 border-radius: 17px;
