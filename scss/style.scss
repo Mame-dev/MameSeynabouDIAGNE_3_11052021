@@ -38,11 +38,12 @@ header{
     }
 }
 form{    
-    background: lightgrey;
+    background: rgb(211, 211, 211, 50%);
     display: flex;
     justify-content: center;
-    padding: 15px;
+    padding: 15px 15px 15px 55px;
     margin-top: 10px;
+    box-shadow: 1px 1px 2px 2px grey;
 }
 input{
     background: unset;
@@ -60,6 +61,7 @@ input{
         display: flex;
         justify-content: center;
         margin-bottom: 0;
+        font-size: 29px;
     }
     p{
         display: flex;
@@ -77,6 +79,7 @@ button{
     position: relative;
     left: 25%;
     border: none;
+    cursor: pointer;
 }
 .fonctionnement{
     display: flex;
@@ -103,6 +106,7 @@ button{
             padding: 20px;
             margin-left: 13%;
             margin-right: 25px;
+            cursor: pointer;
             transition: background-color 250ms;
             &:hover {
                 background: rgb(147, 86, 220, 15%);
@@ -207,7 +211,34 @@ button{
                     }
         }
     }
-}     
+} 
+
+@keyframes scale-up-ver-top {
+  0% {
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+  }
+}		
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .main{position: relative;
     img{
         object-fit: cover;
@@ -236,14 +267,26 @@ button{
             font-size: x-large;
             align-items: center;
             margin-right: 30px;
+            color:transparent;
+	        -webkit-text-stroke:2px black;
+	        opacity:0.2;
+            &:hover {
+                transition: all 2s ease-in-out;
+                background: linear-gradient($color-primary,$color-secondary);
+                -webkit-background-clip: text;
+                -webkit-text-stroke: 0;
+                opacity: 1;
+            }
         }
         &-type{
             margin-left: 25px;
             margin-right: 25px;
+            -webkit-animation: scale-up-ver-top 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-ver-top 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
             h2{
-                margin-left: 15px;
                 border-bottom: 2px solid $color-tertiary;
                 width: 50px;
+                color: gray;
             }
             &__repas{
                 border-radius: 17px;
@@ -251,49 +294,73 @@ button{
                 border: none;
                 margin-bottom: 10%;
                 background: white;
-                padding: 5px 0 5px 13px;
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 100px;
                 &_contain{
-                    display: flex;
-                    flex-direction: column;
-                    span{
-                        font-size: medium;
+                        display: flex;
+                        flex-direction: row;
+                        margin-left: 15px;
+                        width: 100%;
+                        &:hover{
+                            width: 80%;
+                        }
+                    &-nom{
+                        width: 80%;
+                        h3{
+                            font-size: larger;
+                            margin-top: 0;
+                            margin-bottom: 8px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        h4{
+                            margin-top: 0;
+                            font-weight: lighter;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
                     }
-                    p{
-                        font-size: small;
+                    &-prix{
+                        width: 20%;
+                        display: flex;
+                        align-items: flex-end;
                     }
                 }
-                &_prix{
-                    display: flex;
-                    align-items: flex-end;
-                }
-                &_check{
-                    display:inline-block;
-                    width: 35px;
-                    color: white;
+                 &_check{
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 0;
+                    height: 100%;
                     background: $color-tertiary;
                     border-top-right-radius: 1em;
                     border-bottom-right-radius: 1em;
-                    transform: scaleX(1);
+                    opacity:0;
+
+                        -webkit-animation: rotate-center 0.6s ease-in-out both;
+	                    animation: rotate-center 0.6s ease-in-out both;
+               
                     i{
                         display: flex;
-                        justify-content: space-evenly;
-                        position: relative;
-                        top: 20px;
+                        justify-content: center;
+                        align-items: center;
+                        width: 33px;
+                        min-height: 27px;
                         background: white;
                         color: #99E2D0;
                         border-radius: 100%;
-                        transform: rotate(180deg);
-                        opacity: 0;
-                        transition: transform ease-in-out 0.5s, opacity ease-in-out 0.2s 0.2s;
+                        /*transform: rotate(360deg);*/
+                        opacity: 1;
                         }
-                    &:hover{
-                        display:block;
-                        transform-origin: left;
-                        transform: scale(0);
-                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                    }
+                             &:hover{
+                            opacity: 1;
+                            width: 20%;
+                }
                 }
                 
             }

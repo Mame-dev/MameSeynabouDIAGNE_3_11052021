@@ -28,11 +28,12 @@
   }
 
   form {
-    background: lightgrey;
+    background: rgba(211, 211, 211, 0.5);
     display: flex;
     justify-content: center;
-    padding: 15px;
+    padding: 15px 15px 15px 55px;
     margin-top: 10px;
+    box-shadow: 1px 1px 2px 2px grey;
   }
 
   input {
@@ -53,6 +54,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 0;
+    font-size: 29px;
   }
   .reservation p {
     display: flex;
@@ -70,6 +72,7 @@
     position: relative;
     left: 25%;
     border: none;
+    cursor: pointer;
   }
 
   .fonctionnement {
@@ -99,6 +102,7 @@
     padding: 20px;
     margin-left: 13%;
     margin-right: 25px;
+    cursor: pointer;
     transition: background-color 250ms;
   }
   .fonctionnement-etape__choix:hover {
@@ -201,6 +205,30 @@
     opacity: 1;
   }
 
+  @keyframes scale-up-ver-top {
+    0% {
+      -webkit-transform: scaleY(0.4);
+      transform: scaleY(0.4);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+    }
+  }
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
   .main {
     position: relative;
   }
@@ -232,15 +260,27 @@
     font-size: x-large;
     align-items: center;
     margin-right: 30px;
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+    opacity: 0.2;
+  }
+  .main .menu span:hover {
+    transition: all 2s ease-in-out;
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0;
+    opacity: 1;
   }
   .main .menu-type {
     margin-left: 25px;
     margin-right: 25px;
+    -webkit-animation: scale-up-ver-top 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: scale-up-ver-top 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
   .main .menu-type h2 {
-    margin-left: 15px;
     border-bottom: 2px solid #99E2D0;
     width: 50px;
+    color: gray;
   }
   .main .menu-type__repas {
     border-radius: 17px;
@@ -248,50 +288,72 @@
     border: none;
     margin-bottom: 10%;
     background: white;
-    padding: 5px 0 5px 13px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
   }
   .main .menu-type__repas_contain {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin-left: 15px;
+    width: 100%;
   }
-  .main .menu-type__repas_contain span {
-    font-size: medium;
+  .main .menu-type__repas_contain:hover {
+    width: 80%;
   }
-  .main .menu-type__repas_contain p {
-    font-size: small;
+  .main .menu-type__repas_contain-nom {
+    width: 80%;
   }
-  .main .menu-type__repas_prix {
+  .main .menu-type__repas_contain-nom h3 {
+    font-size: larger;
+    margin-top: 0;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .main .menu-type__repas_contain-nom h4 {
+    margin-top: 0;
+    font-weight: lighter;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .main .menu-type__repas_contain-prix {
+    width: 20%;
     display: flex;
     align-items: flex-end;
   }
   .main .menu-type__repas_check {
-    display: inline-block;
-    width: 35px;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 100%;
     background: #99E2D0;
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
-    transform: scaleX(1);
+    opacity: 0;
+    -webkit-animation: rotate-center 0.6s ease-in-out both;
+    animation: rotate-center 0.6s ease-in-out both;
   }
   .main .menu-type__repas_check i {
     display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    min-height: 27px;
     background: white;
     color: #99E2D0;
     border-radius: 100%;
-    transform: rotate(180deg);
-    opacity: 0;
-    transition: transform ease-in-out 0.5s, opacity ease-in-out 0.2s 0.2s;
+    /*transform: rotate(360deg);*/
+    opacity: 1;
   }
   .main .menu-type__repas_check:hover {
-    display: block;
-    transform-origin: left;
-    transform: scale(0);
-    transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+    opacity: 1;
+    width: 20%;
   }
 
   .footer {
