@@ -298,9 +298,6 @@
     display: flex;
     flex-direction: row;
     margin-left: 15px;
-    width: 100%;
-  }
-  .main .menu-type__repas_contain:hover {
     width: 80%;
   }
   .main .menu-type__repas_contain-nom {
