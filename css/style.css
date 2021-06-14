@@ -380,8 +380,8 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   height: 70px;
+  overflow: hidden;
 }
 .main .menu-type__repas_contain {
   display: flex;
@@ -435,7 +435,11 @@ input {
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
   opacity: 0;
-  transition: all 0.8s linear;
+  transition: width 0.5s linear;
+}
+.main .menu-type__repas_check:hover {
+  opacity: 1;
+  width: 20%;
 }
 .main .menu-type__repas_check i {
   display: flex;
@@ -449,15 +453,17 @@ input {
   animation: rotate-center 0.8s linear;
   opacity: 1;
 }
-.main .menu-type__repas_check:hover {
-  opacity: 1;
-  width: 20%;
-}
 
 .footer {
   display: flex;
   flex-direction: column;
   background: rgba(0, 0, 0, 0.77);
+  padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .footer {
+    align-items: center;
+  }
 }
 .footer h2 {
   color: white;
@@ -473,6 +479,8 @@ input {
 }
 .footer-contact p {
   margin-left: 10px;
+  font-size: large;
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

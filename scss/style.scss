@@ -166,7 +166,6 @@ input{
             @include md {
                 width: 30%;
             }
-        
         }
 }
 .fonctionnement{
@@ -401,8 +400,8 @@ input{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                width: 100%;
                 height: 70px;
+                overflow: hidden;
                 &_contain{
                         display: flex;
                         flex-direction: row;
@@ -455,7 +454,11 @@ input{
                     border-top-right-radius: 1em;
                     border-bottom-right-radius: 1em;
                     opacity:0;
-                    transition: all 0.8s linear;
+                    transition: width 0.5s linear;
+                    &:hover{
+                        opacity: 1;
+                        width: 20%;
+                        }
                     i{
                         display: flex;
                         justify-content: center;
@@ -468,10 +471,6 @@ input{
                         animation: rotate-center 0.8s linear;
                         opacity: 1;
                         }
-                             &:hover{
-                            opacity: 1;
-                            width: 20%;
-                            }
                     }
                 
             }
@@ -483,6 +482,10 @@ input{
     display: flex;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.77);
+    padding-bottom: 20px;
+    @include md {
+        align-items: center;
+        }
     h2{
         color: white;
         margin-left: 25px;
@@ -496,6 +499,8 @@ input{
         align-items: baseline;
         p{
             margin-left: 10px;
+            font-size: large;
+            margin-top: 0;
         }
     }
 }
