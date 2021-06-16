@@ -408,7 +408,7 @@ input{
                         width: 100%;
                         &:hover{
                             width: 80%;
-                        }
+                         }
                     &-nom{
                         width: 80%;
                         position: relative;
@@ -444,7 +444,14 @@ input{
                         color: rgb(0 0 0 / 78%);
                     }
                 }
-                 &_check{
+                &:hover > .menu-type__repas_check{
+                    opacity: 1;
+                    width: 20%;
+                    i{
+                        animation: rotate-center 0.8s ease-in-out both;
+                    }
+                }
+                &_check{
                     display:flex;
                     justify-content: center;
                     align-items: center;
@@ -453,12 +460,8 @@ input{
                     background: $color-tertiary;
                     border-top-right-radius: 1em;
                     border-bottom-right-radius: 1em;
-                    opacity:0;
+                    opacity:0; 
                     transition: width 0.5s linear;
-                    &:hover{
-                        opacity: 1;
-                        width: 20%;
-                        }
                     i{
                         display: flex;
                         justify-content: center;
@@ -468,12 +471,10 @@ input{
                         background: white;
                         color: #99E2D0;
                         border-radius: 100%;
-                        animation: rotate-center 0.8s linear;
                         opacity: 1;
                         }
                     }
-                
-            }
+                }
         }
 
     }

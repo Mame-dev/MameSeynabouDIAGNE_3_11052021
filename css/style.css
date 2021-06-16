@@ -425,6 +425,13 @@ input {
   padding-right: 20px;
   color: rgba(0, 0, 0, 0.78);
 }
+.main .menu-type__repas:hover > .menu-type__repas_check {
+  opacity: 1;
+  width: 20%;
+}
+.main .menu-type__repas:hover > .menu-type__repas_check i {
+  animation: rotate-center 0.8s ease-in-out both;
+}
 .main .menu-type__repas_check {
   display: flex;
   justify-content: center;
@@ -437,10 +444,6 @@ input {
   opacity: 0;
   transition: width 0.5s linear;
 }
-.main .menu-type__repas_check:hover {
-  opacity: 1;
-  width: 20%;
-}
 .main .menu-type__repas_check i {
   display: flex;
   justify-content: center;
@@ -450,7 +453,6 @@ input {
   background: white;
   color: #99E2D0;
   border-radius: 100%;
-  animation: rotate-center 0.8s linear;
   opacity: 1;
 }
 
