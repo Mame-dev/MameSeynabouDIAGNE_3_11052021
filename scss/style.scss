@@ -54,7 +54,7 @@ body {
     width: 100%;
     left: 0;
     top: 0;
-    background-color: rgba(238, 238, 238, 0.6);
+    background-color: rgba(238, 238, 238);
     animation: loader .01s;
     animation-delay: 1.75s;
     animation-fill-mode: both;
@@ -185,7 +185,10 @@ input{
         @include md {
             width: 50%;
             }
-        
+        @include lg{
+            display: flex;
+            
+        }
         &__choix{
             text-decoration: none;
             color: black;
@@ -379,104 +382,111 @@ input{
                 opacity: 1;
             }
         }
-        &-type{
+        &-carte{
+            display: flex;
+            flex-direction: column;
+            @include md{
+                flex-flow: wrap;
+                justify-content: space-around;
+            }
+            &--type{
             margin-left: 15px;
             margin-right: 15px;
             -webkit-animation: scale-up-ver-top 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: scale-up-ver-top 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-            h2{
-                border-bottom: 3px solid $color-tertiary;
-                width: 50px;
-                color: rgb(0 0 0 / 61%);
-                font-weight: normal;
-                font-size: larger;
-            }
-            &__repas{
-                border-radius: 17px;
-                box-shadow: 0 0 6px 3px #b1b1b14b;
-                border: none;
-                margin-bottom: 10%;
-                background: white;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                height: 70px;
-                overflow: hidden;
-                &_contain{
-                        display: flex;
-                        flex-direction: row;
-                        width: 100%;
-                        &:hover{
+                h2{
+                    border-bottom: 3px solid $color-tertiary;
+                    width: 50px;
+                    color: rgb(0 0 0 / 61%);
+                    font-weight: normal;
+                    font-size: larger;
+                }
+                &__repas{
+                    border-radius: 17px;
+                    box-shadow: 0 0 6px 3px #b1b1b14b;
+                    border: none;
+                    margin-bottom: 10%;
+                    background: white;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 70px;
+                    overflow: hidden;
+                    &_contain{
+                            display: flex;
+                            flex-direction: row;
+                            width: 100%;
+                            &:hover{
+                                width: 80%;
+                            }
+                        &-nom{
                             width: 80%;
-                         }
-                    &-nom{
-                        width: 80%;
-                        position: relative;
-                        top: 10px;
-                        padding-left: 15px;
-                        h3{
-                            font-size: large;
-                            margin-top: 0;
-                            margin-bottom: 8px;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
+                            position: relative;
+                            top: 10px;
+                            padding-left: 15px;
+                            h3{
+                                font-size: large;
+                                margin-top: 0;
+                                margin-bottom: 8px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                color: rgb(0 0 0 / 78%);
+                            }
+                            h4{
+                                margin-top: 0;
+                                font-weight: lighter;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                color: rgb(0 0 0 / 68%);
+                                font-size: 15px;
+                            }
+                        }
+                        &-prix{
+                            width: 20%;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: flex-end;
+                            position: relative;
+                            top: 6px;
+                            padding-right: 20px;
                             color: rgb(0 0 0 / 78%);
                         }
-                        h4{
-                            margin-top: 0;
-                            font-weight: lighter;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
-                            color: rgb(0 0 0 / 68%);
-                            font-size: 15px;
+                    }
+                    &:hover > .menu-carte--type__repas_check{
+                        opacity: 1;
+                        width: 20%;
+                        i{
+                            animation: rotate-center 0.8s ease-in-out both;
                         }
                     }
-                    &-prix{
-                        width: 20%;
-                        display: flex;
-                        align-items: flex-end;
-                        justify-content: flex-end;
-                        position: relative;
-                        top: 6px;
-                        padding-right: 20px;
-                        color: rgb(0 0 0 / 78%);
-                    }
-                }
-                &:hover > .menu-type__repas_check{
-                    opacity: 1;
-                    width: 20%;
-                    i{
-                        animation: rotate-center 0.8s ease-in-out both;
-                    }
-                }
-                &_check{
-                    display:flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 0;
-                    height: 100%;
-                    background: $color-tertiary;
-                    border-top-right-radius: 1em;
-                    border-bottom-right-radius: 1em;
-                    opacity:0; 
-                    transition: width 0.5s linear;
-                    i{
-                        display: flex;
+                    &_check{
+                        display:flex;
                         justify-content: center;
                         align-items: center;
-                        width: 33px;
-                        min-height: 27px;
-                        background: white;
-                        color: #99E2D0;
-                        border-radius: 100%;
-                        opacity: 1;
+                        width: 0;
+                        height: 100%;
+                        background: $color-tertiary;
+                        border-top-right-radius: 1em;
+                        border-bottom-right-radius: 1em;
+                        opacity:0; 
+                        transition: width 0.5s linear;
+                        i{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 33px;
+                            min-height: 27px;
+                            background: white;
+                            color: #99E2D0;
+                            border-radius: 100%;
+                            opacity: 1;
+                            }
                         }
                     }
                 }
-        }
-
+            } 
     }
 }
 .footer{
