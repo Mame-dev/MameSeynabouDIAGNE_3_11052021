@@ -187,6 +187,8 @@ input{
             }
         @include lg{
             display: flex;
+            flex-direction: row;
+            width: 95%;
             
         }
         &__choix{
@@ -198,13 +200,17 @@ input{
             margin-bottom: 20px;
             background: whitesmoke;
             padding: 20px;
-            margin-left: 13%;
-            margin-right: 25px;
+            margin-left: 35px;
             cursor: pointer;
             transition: background-color 250ms;
+            width: 77%;
             &:hover {
                 background: rgb(147, 86, 220, 15%);
                 box-shadow: 1px 1px 2px 2px rgb(147, 86, 220, 15%);
+            }
+            @include lg {
+                width: 57%;
+                height: 20px;
             }
         }
     }
