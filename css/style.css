@@ -153,6 +153,11 @@ input {
   align-self: flex-start;
   margin-left: 25px;
 }
+@media (min-width: 992px) {
+  .fonctionnement h1 {
+    margin-bottom: 0;
+  }
+}
 .fonctionnement-etape {
   display: flex;
   flex-direction: column;
@@ -168,13 +173,14 @@ input {
     display: flex;
     flex-direction: row;
     width: 95%;
+    padding: 30px 0;
   }
 }
 .fonctionnement-etape__choix {
   text-decoration: none;
   color: black;
   border-radius: 17px;
-  box-shadow: 1px 1px 2px 2px lightgrey;
+  box-shadow: 1px 1px 2px 2px lightgray;
   border: none;
   margin-bottom: 20px;
   background: whitesmoke;
@@ -205,7 +211,7 @@ input {
   bottom: -1px;
 }
 .choix_icon {
-  color: gray;
+  color: grey;
 }
 .choix_icon:hover {
   color: #9356DC;
@@ -405,6 +411,12 @@ input {
   align-items: center;
   height: 70px;
   overflow: hidden;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .main .menu-carte--type__repas {
+    width: 375px;
+  }
 }
 .main .menu-carte--type__repas_contain {
   display: flex;
@@ -496,7 +508,7 @@ input {
   font-family: "Shrikhand";
 }
 .footer-contact {
-  color: #ffff;
+  color: white;
   text-decoration: none;
   margin-left: 25px;
   display: flex;
